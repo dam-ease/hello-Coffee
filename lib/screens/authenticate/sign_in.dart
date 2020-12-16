@@ -56,7 +56,9 @@ class _SignInState extends State<SignIn> {
                           validator: (value) =>
                               value.isEmpty ? 'Enter an Email' : null,
                           onChanged: (value) {
-                            email = value;
+                            setState(() {
+                              email = value;
+                            });
                           },
                         ),
                         SizedBox(
